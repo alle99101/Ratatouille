@@ -3,7 +3,11 @@
 pip install matplotlib
 ```
 # 2. Tiến hành code
-## Convert Image to Grayscale
+## Convert RGB Image to Grayscale
+Ta có công thức
+```
+RGB[A] to Gray:Y←0.299⋅R+0.587⋅G+0.114⋅B
+```
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
