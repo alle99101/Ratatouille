@@ -32,7 +32,7 @@ plt.show()
 import cv2
 import numpy as np 
 
-img = cv2.imread('witcher.jpg')
+img = cv2.imread('Sasha.PNG')
 b,g,r = cv2.split(img)
 with open("Red.txt","w") as Red:
   for _ in r:
