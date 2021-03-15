@@ -27,7 +27,7 @@ plt.imshow(gray, cmap=plt.get_cmap('gray'), vmin=0, vmax=1)
 plt.show()
 
 ```
-### Convert image file to bin
+### Get RGB value 
 ```python
 import cv2
 import numpy as np 
