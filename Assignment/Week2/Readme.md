@@ -29,21 +29,14 @@ plt.show()
 ```
 ### Get RGB value 
 ```python
-import cv2
-import numpy as np 
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from PIL import *
+filename = "Sasha.PNG"
+img = Image.open(filename)
+img.show()
+colors = img.getpixel((320,240))
+print(colors)
 
-img = cv2.imread('Sasha.PNG')
-b,g,r = cv2.split(img)
-with open("Red.txt","w") as Red:
-  for _ in r:
-    np.savetxt(Red,_,fmt='%d')
-with open("Blue.txt","w") as Blue:
-  for _ in b:
-    np.savetxt(Blue,_,fmt='%d')
-with open("Green.txt","w") as Green:
-  for _ in g:
-    np.savetxt(Green,_,fmt='%d')
-Red.close()
-Blue.close()
-Green.close()
 ```
