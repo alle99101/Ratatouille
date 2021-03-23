@@ -3,7 +3,6 @@ module RGBtoGray_tb ();
   
   reg [31:0] r,g,b;
   wire [31:0] gray;
-  parameter cycle=1;
   integer sr,sg,sb,sgray, wr,wg,wb;
   reg WE, CLK;
   reg [31:0] i;
@@ -37,8 +36,4 @@ $fclose(sgray);
 #100;
 $stop;
 end
-//always @(posedge clk) begin
-//  if(Gray!= 8'hx) begin  end
-//end
-
 endmodule 
