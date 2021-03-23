@@ -27,16 +27,6 @@ plt.imshow(gray, cmap=plt.get_cmap('gray'), vmin=0, vmax=1)
 plt.show()
 
 ```
-### Get RGB value 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from PIL import *
-filename = "Sasha.PNG"
-img = Image.open(filename)
-img.show()
-colors = img.getpixel((320,240))
-print(colors)
+## 2. Verilog
+## 3. Compare
 
-```
