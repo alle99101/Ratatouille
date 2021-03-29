@@ -28,5 +28,6 @@ plt.show()
 
 ```
 ## 2. Verilog
+
 ## 3. Compare
 
