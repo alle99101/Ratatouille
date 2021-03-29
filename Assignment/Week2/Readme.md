@@ -28,6 +28,12 @@ plt.show()
 
 ```
 ## 2. Verilog
+###RTL:
+![Image description](https://github.com/alle99101/Ratatouille/blob/main/Assignment/Week2/RTL/Schematic/TopRTL.PNG)
+Sử dụng 32 bit floating point input.
 
+![Image description](https://github.com/alle99101/Ratatouille/blob/main/Assignment/Week2/RTL/Schematic/ALURTL.PNG)
+Thực hiện phép tính và lưu kết quả ra grayfloat.txt.
 ## 3. Compare
+Thực hiện open image của verilog bằng file grayfloat.txt bằng python và so sánh kết quả.
 
