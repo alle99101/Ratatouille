@@ -28,7 +28,7 @@ plt.show()
 
 ```
 ## 2. Verilog
-###RTL:
+### RTL:
 ![Image description](https://github.com/alle99101/Ratatouille/blob/main/Assignment/Week2/RTL/Schematic/TopRTL.PNG)
 Sử dụng 32 bit floating point input.
 
