@@ -1,5 +1,7 @@
-module Floatadder(data_out,x,y);
+module Floatadder(data_out,x,y,valid_inx,valid_iny,valid_out,clk);
   input [31:0] x,y;
+  input clk, valid_inx, valid_iny;
+  output reg valid_out;
   output reg [31:0] data_out;
   
 reg [7:0] ex, ey;
@@ -8,8 +10,9 @@ reg [24:0] mout;
 reg [7:0] bias;
 
 
-always @(x or y) 
+always @(posedge clk) 
 begin
+if ((valid_inx == 1'b1) && (valid_iny == 1'b1)) begin
   mx = {1'd1, x[22:0]};
   my = {1'd1, y[22:0]};
   ex = x[30:23];
@@ -153,7 +156,12 @@ else
 					data_out[22:0] = {23'd0};
 					data_out[30:23] = ex - 23;
 				end
-		else data_out[30:0] = 0;			
+		else data_out[30:0] = 0;	
+end
+else begin
+valid_out = 1'b0;
+data_out[31:0] = 1'b0;
+end
 end
 endmodule
       

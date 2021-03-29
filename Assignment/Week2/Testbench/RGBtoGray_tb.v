@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 module RGBtoGray_tb ();
-	reg CLK;
+	reg clk, valid_in, rst;
   
   reg [31:0] r,g,b;
   wire [31:0] gray;
@@ -8,12 +8,16 @@ module RGBtoGray_tb ();
   reg [31:0] green [249999:0];
   reg [31:0] blue [249999:0];
   reg [31:0] gurei;
-
-integer i;           
+  integer i;  
+         
 always begin
-  #20 CLK = ~CLK;
- end // clock		   
-RGBtoGray RGBtoGray0(r, g, b, gray);
+  #20 clk = ~clk;
+	rst = 1'b0;
+	valid_in = 1'b1;
+ end // clock		
+ 
+RGBtoGray RGBtoGray0(r, g, b, valid_in, clk, rst, gray);
+
 initial begin 
     
     //open file 
