@@ -157,6 +157,7 @@ else
 					data_out[30:23] = ex - 23;
 				end
 		else data_out[30:0] = 0;	
+valid_out = 1'b1;
 end
 else begin
 valid_out = 1'b0;

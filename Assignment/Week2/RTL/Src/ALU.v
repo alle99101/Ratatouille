@@ -19,6 +19,6 @@ Floatmulti multib (bout, 32'b00111101111010010111100011010101, b, valid_inb, val
 Floatadder addrg(t, gout, rout, valid_outmulg, valid_outmulr, valid_out, clk);
 
 //0.299*R + 0.587*G + 0.114*B
-Floatadder addrgb(gray, bout , t, valid_outb, valid_out, valid_unused, clk);
+Floatadder addrgb(gray, bout , t, valid_outmulb, valid_out, valid_unused, clk);
 
 endmodule 
